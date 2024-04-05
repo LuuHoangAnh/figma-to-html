@@ -15,7 +15,7 @@ body {
   font-size: 1.6rem;
   font-family: "Poppins", sans-serif;
 }
-/* -----common------ */
+/* ----------------------------------common-------------------------------------- */
 .heading-lv2 {
   color: #171100;
   font-family: var(--font-heading);
@@ -52,7 +52,22 @@ body {
 a {
   text-decoration: none;
 }
-/* -----header------ */
+/* class dung de cat dong thua (hien thi thanh dau 3 cham) */
+.line-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: var(--line-clamp, 1);
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+/* qua 2 dong thi hien dau 3cham */
+.line-clamp.line-2 {
+  --line-clamp: 2;
+}
+/* dung cho khi dong chu ko co khoang trang qua dai gay pha vo giao dien */
+.break-all {
+  word-break: break-all;
+}
+/* ---------------------------header--------------------------------------- */
 .header {
   background: #fffcf4;
 }
@@ -109,7 +124,7 @@ nav li.active a,
 .header .action {
   margin-left: 49px;
 }
-/* -----hero----- */
+/* ---------------------------hero------------------------------ */
 .hero {
   padding: 56px 0 65px;
   background: #fffcf4;
@@ -271,7 +286,7 @@ nav li.active a,
   margin-left: 28px;
 }
 
-/* ----popular---- */
+/* ----------------------------popular--------------------------------------- */
 .popular {
   padding: 65px 0;
   margin-top: 135px;
@@ -322,6 +337,8 @@ nav li.active a,
 }
 
 .popular .course-item {
+  /* giu ti le khung */
+  flex: 1;
   border-radius: 12px;
   border: 1px solid #e2dfda;
   background: #fff;
